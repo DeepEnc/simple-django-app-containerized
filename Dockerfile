@@ -9,6 +9,7 @@ COPY cool_counters
 RUN apt-get update && \
     apt-get install -y python3 python3-pip && \
     pip install -r requirments.txt && \
+    python3 manage.py migrate && \
     cd cool_counters
 
 
